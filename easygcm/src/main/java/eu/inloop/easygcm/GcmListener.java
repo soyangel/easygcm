@@ -21,4 +21,10 @@ public interface GcmListener {
      */
     void sendRegistrationIdToBackend(String registrationId);
 
+    /**
+     * This is the project number you got from the API Console, as described in
+     * <a href="https://developer.android.com/google/gcm/client.html">Getting Started</a>.
+     */
+    String getSenderId();
+
 }

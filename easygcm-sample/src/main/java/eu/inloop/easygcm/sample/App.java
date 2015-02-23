@@ -8,6 +8,8 @@ import eu.inloop.easygcm.WakeLockRelease;
 
 public class App extends Application implements GcmListener {
 
+    private static final String SENDER_ID = "835909578313"; // easygcm-sample project
+
     @Override
     public void onMessage(String s, Bundle bundle, WakeLockRelease wakeLockRelease) {
         System.out.println("### message: " + s);
@@ -21,6 +23,11 @@ public class App extends Application implements GcmListener {
     @Override
     public void sendRegistrationIdToBackend(String registrationId) {
         
+    }
+
+    @Override
+    public String getSenderId() {
+        return SENDER_ID;
     }
 
 }
